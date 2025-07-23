@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mod Installation & Requirements</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f7fbff;
+      --text-color: #2a2a2a;
+      --card-bg: #ffffff;
+      --highlight: #e7f2fb;
+      --border-accent: #4a90e2;
+      --code-bg: #eef6fc;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #ddd;
+      --card-bg: #2c2c2c;
+      --highlight: #333c50;
+      --border-accent: #66aaff;
+      --code-bg: #444;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .card {
+      max-width: 800px;
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+
+    .banner {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .toggle-container {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+
+    .toggle-button {
+      background: var(--card-bg);
+      color: var(--text-color);
+      font-family: 'Montserrat', sans-serif;
+      border: 2px solid var(--border-accent);
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .toggle-button:hover {
+      background: var(--border-accent);
+      color: #fff;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Amatic SC', cursive;
+      font-weight: 400;
+      font-size: 2em;
+      letter-spacing: 1px;
+      margin: 0;
+      color: var(--text-color);
+    }
+
+    .section-header {
+      background-color: var(--highlight);
+      border-left: 4px solid var(--border-accent);
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    code {
+      background-color: var(--code-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: var(--border-accent);
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #2c6fc6;
+    }
+
+    body.dark a {
+      color: #66aaff;
+    }
+
+    body.dark a:hover {
+      color: #88ccff;
+    }
+
+    .tip {
+      background: var(--highlight);
+      border-left: 4px solid var(--border-accent);
+      padding: 12px 16px;
+      margin: 1em 0;
+      border-radius: 8px;
+    }
+
+    .section-emoji {
+      font-size: 1.5em;
+    }
+
+    .footer {
+      margin-top: 2em;
+      text-align: center;
+      font-size: 1.1em;
+    }
+
+    .website-button {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #fff;
+      background-color: var(--border-accent);
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .website-button:hover {
+      background-color: #3b78c3;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="toggle-container">
+      <button class="toggle-button" onclick="toggleMode()">🌓 Toggle Theme</button>
+    </div>
+
+    <img src="https://i.ibb.co/39cQyV1p/post-banner-template.png" alt="Mod Banner" class="banner">
+
+    <div class="section-header">
+      <span class="section-emoji">📦</span>
+      <h2>Mod Installation & Requirements</h2>
+    </div>
+    <p>Thank you for downloading! To make sure everything works properly, please follow the steps below carefully.</p>
+
+    <div class="section-header">
+      <span class="section-emoji">✅</span>
+      <h3>Required Files</h3>
+    </div>
+    <p>These mods require the following libraries to function:</p>
+    <ul>
+      <li>🌐 <a href="https://lot51.cc/mods/core-library" target="_blank"><strong>Lot 51's Core Library</strong></a></li>
+      <li>📁 <a href="https://www.patreon.com/posts/midnitetech-121729961?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" target="_blank"><strong>midnitetech_modlibrary</strong></a></li>
+    </ul>
+    <p>Make sure both are installed in your Mods folder and that you have the latest version.</p>
+
+<div class="section-header">
+  <span class="section-emoji">🎮</span>
+  <h3>Mod Compatibility & Required Packs</h3>
+</div>
+
+<p>Some mods require specific DLC packs. Please ensure you have the necessary packs installed to avoid in-game issues:</p>
+
+<ul>
+  <li><strong>Retail Career Pack (Full-Time):</strong> ⭐ Get Famous, 🌨️ Seasons, 🏔️ Snowy Escape, 🐈 Cats & Dogs</li>
+  <li><strong>Holistic Health Consultant (Semi-Active):</strong> 🪷 Spa Day, 🏕️ Outdoor Retreat</li>
+  <li><strong>All Hours Career Pack (Full-Time):</strong> 👥 Get Together, 🌨️ Seasons, ♻️ Eco Lifestyle, 💼 Get to Work</li>
+  <li><strong>Chiropractor Career (Semi-Active):</strong> 🪷 Spa Day</li>
+  <li><strong>Odd Jobs Megapack:</strong> 🏝️ Island Living</li>
+</ul>
+
+<div class="section-header">
+  <span class="section-emoji">🌟</span>
+  <h3>Aspiration Requirements</h3>
+</div>
+
+<ul>
+  <li><strong>Well-Rounded Child Aspiration:</strong> 👪 Parenthood</li>
+  <li><strong>Career Focused Aspiration:</strong> 🏝️ Island Living, 👪 Parenthood, 🎓 Discover University</li>
+  <li><strong>Discover Life Aspiration:</strong> 👥 Get Together, plus one of:
+    <ul>
+      <li>🎮 City Living <em>or</em> 🏔️ Snowy Escape <em>or</em> 🏝️ Island Living</li>
+      <li>🐈 Cats & Dogs <em>or</em> 🐎 Horse Ranch</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="section-header">
+  <span class="section-emoji">🧪</span>
+  <h3>Gameplay Mod Requirements</h3>
+</div>
+
+<ul>
+  <li><strong>Lyrical Icon Scenario:</strong> 🏙️ City Living</li>
+  <li><strong>Power Outages:</strong> 🌩️ Seasons</li>
+  <li><strong>SimU Online Degrees:</strong> 🎓 Discover University</li>
+</ul>
+
+<div class="section-header">
+  <span class="section-emoji">🧼</span>
+  <h3>Mini Mods & Utilities</h3>
+</div>
+
+<ul>
+  <li><strong>Facial Cleanser 4 All:</strong> 🏫 High School Years</li>
+  <li><strong>EP17 – No Specters:</strong> 🪦 Paranormal Stuff / Life & Death</li>
+  <li><strong>Less PO Visits:</strong> 🏘️ For Rent</li>
+  <li><strong>Odd Jobs – Hide Maxis:</strong> 🏝️ Island Living</li>
+  <li><strong>No Scared of Thunderstorms Moodlet:</strong> 🌩️ Seasons</li>
+</ul>
+
+
+    <div class="section-header">
+      <span class="section-emoji">🗂</span>
+      <h3>Installation Tips</h3>
+    </div>
+    <div class="tip">
+      ✅ <strong>Correct:</strong><br>
+      <code>Mods/MyModFolder/MyMod.ts4script</code><br><br>
+      ❌ <strong>Incorrect:</strong><br>
+      <code>Mods/MyModFolder/AnotherFolder/MyMod.ts4script</code>
+    </div>
+    <p>All <code>.ts4script</code> files must be no more than one folder deep inside your Mods folder.</p>
+    <p>Do not try and open these files — just drop them in your Mods folder. </p>
+
+    <div class="section-header">
+      <span class="section-emoji">📚</span>
+      <h3>Need Help?</h3>
+    </div>
+    <p>For downloads, troubleshooting, and all mod info, visit my site:</p>
+    <div style="text-align: center; margin-top: 1em;">
+      <a href="https://midnitetechmods.com/" target="_blank" class="website-button">🌐 midnitetechmods.com</a>
+    </div>
+
+    <div class="footer">
+      💖 Enjoy the mod, and happy Simming!<br>
+      – midnitetech
+    </div>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
