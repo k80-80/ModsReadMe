@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Mod Installation & Requirements</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-color: #f7fbff;
@@ -74,13 +74,19 @@
       color: #fff;
     }
 
-    h1, h2, h3 {
-      font-family: 'Amatic SC', cursive;
-      font-weight: 400;
+    h1 {
       font-size: 2em;
-      letter-spacing: 1px;
+      margin: 0 0 0.5em;
+    }
+
+    h2 {
+      font-size: 1.6em;
       margin: 0;
-      color: var(--text-color);
+    }
+
+    h3 {
+      font-size: 1.3em;
+      margin: 0;
     }
 
     .section-header {
@@ -160,6 +166,39 @@
     .website-button:hover {
       background-color: #3b78c3;
     }
+
+    details {
+      margin-bottom: 1.2em;
+      background-color: var(--highlight);
+      border-left: 4px solid var(--border-accent);
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary .arrow {
+      width: 10px;
+      height: 10px;
+      flex-shrink: 0;
+      transition: transform 0.25s ease;
+      fill: var(--text-color);
+    }
+
+    details[open] summary .arrow {
+      transform: rotate(90deg);
+    }
   </style>
 </head>
 <body>
@@ -170,91 +209,106 @@
 
     <img src="https://i.ibb.co/39cQyV1p/post-banner-template.png" alt="Mod Banner" class="banner">
 
-    <div class="section-header">
-      <span class="section-emoji">📦</span>
-      <h2>Mod Installation & Requirements</h2>
-    </div>
-    <p>Thank you for downloading! To make sure everything works properly, please follow the steps below carefully.</p>
+    <p>Thank you for downloading my <strong>all-in-one mods pack</strong>! To make sure everything works properly, please follow the steps below carefully.</p>
 
     <div class="section-header">
       <span class="section-emoji">✅</span>
       <h3>Required Files</h3>
     </div>
-    <p>These mods require the following libraries to function:</p>
+    <p>99% of my mods <strong>require</strong> the following libraries to function:</p>
     <ul>
       <li>🌐 <a href="https://lot51.cc/mods/core-library" target="_blank"><strong>Lot 51's Core Library</strong></a></li>
-      <li>📁 <a href="https://www.patreon.com/posts/midnitetech-121729961?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link" target="_blank"><strong>midnitetech_modlibrary</strong></a></li>
+      <li>📁 <a href="https://www.patreon.com/posts/midnitetech-121729961" target="_blank"><strong>midnitetech_modlibrary</strong></a></li>
     </ul>
-    <p>Make sure both are installed in your Mods folder and that you have the latest version.</p>
+    <p>Make sure both are installed in your <strong>Mods</strong> folder and that you have the latest version of each. All <code>.ts4script</code> files must be no more than <strong>one folder deep</strong> inside your Mods folder, as shown below.</p>
 
-<div class="section-header">
-  <span class="section-emoji">🎮</span>
-  <h3>Mod Compatibility & Required Packs</h3>
-</div>
-
-<p>Some mods require specific DLC packs. Please ensure you have the necessary packs installed to avoid in-game issues:</p>
-
-<ul>
-  <li><strong>Retail Career Pack (Full-Time):</strong> ⭐ Get Famous, 🌨️ Seasons, 🏔️ Snowy Escape, 🐈 Cats & Dogs</li>
-  <li><strong>Holistic Health Consultant (Semi-Active):</strong> 🪷 Spa Day, 🏕️ Outdoor Retreat</li>
-  <li><strong>All Hours Career Pack (Full-Time):</strong> 👥 Get Together, 🌨️ Seasons, ♻️ Eco Lifestyle, 💼 Get to Work</li>
-  <li><strong>Chiropractor Career (Semi-Active):</strong> 🪷 Spa Day</li>
-  <li><strong>Odd Jobs Megapack:</strong> 🏝️ Island Living</li>
-</ul>
-
-<div class="section-header">
-  <span class="section-emoji">🌟</span>
-  <h3>Aspiration Requirements</h3>
-</div>
-
-<ul>
-  <li><strong>Well-Rounded Child Aspiration:</strong> 👪 Parenthood</li>
-  <li><strong>Career Focused Aspiration:</strong> 🏝️ Island Living, 👪 Parenthood, 🎓 Discover University</li>
-  <li><strong>Discover Life Aspiration:</strong> 👥 Get Together, plus one of:
-    <ul>
-      <li>🎮 City Living <em>or</em> 🏔️ Snowy Escape <em>or</em> 🏝️ Island Living</li>
-      <li>🐈 Cats & Dogs <em>or</em> 🐎 Horse Ranch</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="section-header">
-  <span class="section-emoji">🧪</span>
-  <h3>Gameplay Mod Requirements</h3>
-</div>
-
-<ul>
-  <li><strong>Lyrical Icon Scenario:</strong> 🏙️ City Living</li>
-  <li><strong>Power Outages:</strong> 🌩️ Seasons</li>
-  <li><strong>SimU Online Degrees:</strong> 🎓 Discover University</li>
-</ul>
-
-<div class="section-header">
-  <span class="section-emoji">🧼</span>
-  <h3>Mini Mods & Utilities</h3>
-</div>
-
-<ul>
-  <li><strong>Facial Cleanser 4 All:</strong> 🏫 High School Years</li>
-  <li><strong>EP17 – No Specters:</strong> 🪦 Paranormal Stuff / Life & Death</li>
-  <li><strong>Less PO Visits:</strong> 🏘️ For Rent</li>
-  <li><strong>Odd Jobs – Hide Maxis:</strong> 🏝️ Island Living</li>
-  <li><strong>No Scared of Thunderstorms Moodlet:</strong> 🌩️ Seasons</li>
-</ul>
-
-
-    <div class="section-header">
-      <span class="section-emoji">🗂</span>
-      <h3>Installation Tips</h3>
-    </div>
     <div class="tip">
       ✅ <strong>Correct:</strong><br>
       <code>Mods/MyModFolder/MyMod.ts4script</code><br><br>
       ❌ <strong>Incorrect:</strong><br>
       <code>Mods/MyModFolder/AnotherFolder/MyMod.ts4script</code>
     </div>
-    <p>All <code>.ts4script</code> files must be no more than one folder deep inside your Mods folder.</p>
-    <p>Do not try and open these files — just drop them in your Mods folder. </p>
+
+    <div class="section-header">
+      <span class="section-emoji">🎮</span>
+      <h3>Mod Compatibility & Required Packs</h3>
+    </div>
+   <p>Some mods require specific <strong>DLC</strong> packs. If you don&rsquo;t have the required packs installed, you can either delete those mods or ignore any Last Exception errors that may appear &mdash; they won&rsquo;t break your game. <br /><br />Anything <strong>not listed below</strong> is fully <strong>Base Game compatible</strong>. <br /><br />All of my mods are compatible with each other and with most other mods &mdash; the only exception is if two mods override the same function (e.g., <em>Styled Look Hider</em>).</p>
+
+    <div class="section-header">
+      <span class="section-emoji">🏢</span>
+      <h3>Career Requirements</h3>
+    </div>
+    <details>
+      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>Click to view</summary>
+<ul>
+<li><strong>Retail Career Pack (Full-Time):</strong><br />⭐ Get Famous<br />🌨️ Seasons<br />🏔️ Snowy Escape<br />🐈 Cats &amp; Dogs<br /><br /></li>
+<li><strong>Holistic Health Consultant (Semi-Active):<br /></strong>🪷 Spa Day<br />🏕️ Outdoor Retreat<br /><br /></li>
+<li><strong>All Hours Career Pack (Full-Time):</strong><br />👥 Get Together<br />🌨️ Seasons<br />♻️ Eco Lifestyle<br />💼 Get to Work<br /><br /></li>
+<li><strong>Chiropractor Career (Semi-Active):<br /></strong>🪷 Spa Day<br /><br /></li>
+<li><strong>Odd Jobs Megapack:<br /></strong>🏝️ Island Living</li>
+</ul>
+    </details>
+
+    <div class="section-header">
+      <span class="section-emoji">🌟</span>
+      <h3>Aspiration Requirements</h3>
+    </div>
+    <details>
+      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>Click to view</summary>
+      <ul>
+<li><strong>Well-Rounded Child Aspiration:</strong><br />👪 Parenthood<br /><br /></li>
+<li><strong>Career Focused Aspiration:<br /></strong>🏝️ Island Living<br />👪 Parenthood<br />🎓 Discover University<br /><br /></li>
+<li><strong>Discover Life Aspiration:</strong><br />👥 Get Together<br />🎮 City Living <span style="text-decoration: underline;"><strong><em>or</em></strong></span> 🏔️ Snowy Escape <span style="text-decoration: underline;"><strong><em>or</em></strong></span> 🏝️ Island Living<br />🐈 Cats &amp; Dogs <span style="text-decoration: underline;"><strong><em>or</em></strong></span> 🐎 Horse Ranch</li>
+</ul>
+    </details>
+
+    <div class="section-header">
+      <span class="section-emoji">🧪</span>
+      <h3>Gameplay Mod Requirements</h3>
+    </div>
+    <details>
+      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>Click to view</summary>
+<ul>
+<li><strong>Lyrical Icon Scenario:</strong><br />🏙️ City Living<br /><br /></li>
+<li><strong>Power Outages:</strong><br />🌩️ Seasons<br /><br /></li>
+<li><strong>SimU Online Degrees:</strong><br />🎓 Discover University<br /><br /></li>
+<li><strong>Noteworthy Notebook:</strong><br />🎮 <strong>Requires ALL DLC<span style="color: #ff0000;">*</span></strong> </li>
+</ul>
+<p style="padding-left: 40px;"><span style="color: #ff0000;">*</span><span style="text-decoration: underline;">If you <strong>own every DLC</strong>, use:</span></p>
+<ul>
+<li style="list-style-type: none;">
+<ul style="list-style-type: square;">
+<li><code>midnitetech_NoteworthyNotebook</code> <em><strong>ONLY</strong></em></li>
+<li>You do <em><strong>NOT</strong></em> need the Pack Addons</li>
+</ul>
+</li>
+</ul>
+<p style="padding-left: 40px;"><span style="text-decoration: underline;">If you <strong>do NOT own all DLC</strong>s, use:</span></p>
+<ul>
+<li style="list-style-type: none;">
+<ul style="list-style-type: square;">
+<li><code>midnitetech_NoteworthyNotebook_BGC<br /></code></li>
+<li>Optionally add the matching files from <strong>Pack Addons</strong> for the DLCs you <em><strong>do</strong></em> have</li>
+</ul>
+</li>
+</ul>
+    </details>
+
+    <div class="section-header">
+      <span class="section-emoji">🧼</span>
+      <h3>Mini Mods Requirements</h3>
+    </div>
+    <details>
+      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>Click to view</summary>
+      <ul>
+        <li><strong>Facial Cleanser 4 All:</strong><br>🏫 High School Years</li><br>
+        <li><strong>EP17 – No Specters:</strong><br>🪦 Life & Death</li><br>
+        <li><strong>Less PO Visits:</strong><br>🏘️ For Rent</li><br>
+        <li><strong>Odd Jobs – Hide Maxis:</strong><br>🏝️ Island Living</li><br>
+        <li><strong>No Scared of Thunderstorms Moodlet:</strong><br>🌩️ Seasons</li>
+      </ul>
+    </details>
 
     <div class="section-header">
       <span class="section-emoji">📚</span>
@@ -266,7 +320,7 @@
     </div>
 
     <div class="footer">
-      💖 Enjoy the mod, and happy Simming!<br>
+      💖 Enjoy the mods, and happy Simming!<br>
       – midnitetech
     </div>
   </div>
