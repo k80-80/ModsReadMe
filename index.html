@@ -8,16 +8,36 @@
   <style>
     :root {
       --bg-color: #f7fbff;
-      --text-color: #2a2a2a;
+      --text-color: #78a2b6;
       --card-bg: #ffffff;
       --highlight: #e7f2fb;
-      --border-accent: #4a90e2;
+      --border-accent: #89afc0;
       --code-bg: #eef6fc;
+      --bg-color-tip: #fab96e;
+      --border-accent-tip: #fab96e;
+      --tip-bg: #ffe4d2;
+      --tip-color: #ef9300;
+    }
+
+    a:link, a:visited {
+    background-color: #89afc0;
+    color: white;
+    padding: 1px 3px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+    transition: background 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    a:hover, a:active {
+    background-color: #f7fbff;
     }
 
     body.dark {
       --bg-color: #1e1e1e;
-      --text-color: #ddd;
+      --text-color: #78a2b6;
       --card-bg: #2c2c2c;
       --highlight: #333c50;
       --border-accent: #66aaff;
@@ -100,6 +120,18 @@
       align-items: center;
       gap: 10px;
     }
+    
+    .section {
+      background-color: var(--bg-color-tip);
+      border-left: 4px solid var(--border-accent-tip);
+      padding: 1px 1px;
+      border-radius: 4px;
+      margin-top: .5em;
+      margin-bottom: .5em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
     ul {
       padding-left: 1.2em;
@@ -122,13 +154,16 @@
     a:hover {
       color: #2c6fc6;
     }
-
-    body.dark a {
-      color: #66aaff;
-    }
-
-    body.dark a:hover {
-      color: #88ccff;
+    
+    .tip-box {
+      background: var(--tip-bg);
+      color: var(--tip-color);
+      border-radius: 1px;
+      padding: 5px 18px;
+      box-shadow: 0 1px 8px #54e7e216;
+      text-align: center;
+      font-size: .9em;
+      margin-bottom: 1.2em;
     }
 
     .tip {
@@ -138,9 +173,9 @@
       margin: 1em 0;
       border-radius: 8px;
     }
-
+    
     .section-emoji {
-      font-size: 1.5em;
+      font-size: 2em;
     }
 
     .footer {
@@ -154,8 +189,8 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
       font-size: 1.1em;
-      color: #fff;
-      background-color: var(--border-accent);
+      color: #f7fbff;
+      background-color: var(--highlight);
       padding: 12px 20px;
       border-radius: 8px;
       text-decoration: none;
@@ -164,7 +199,7 @@
     }
 
     .website-button:hover {
-      background-color: #3b78c3;
+      background-color: #f7fbff;
     }
 
     details {
@@ -207,124 +242,112 @@
       <button class="toggle-button" onclick="toggleMode()">🌓 Toggle Theme</button>
     </div>
 
-    <img src="https://i.ibb.co/39cQyV1p/post-banner-template.png" alt="Mod Banner" class="banner">
+    <img src="https://i.ibb.co/BVvrHB87/directoryrequirementsguide.png" alt="Mod Banner" class="banner">
 
-    <p>Thank you for downloading! To make sure everything works properly, please follow the steps below carefully.</p>
+       <div class="tip-box">
+    <strong>⚠️ Required Files:</strong> 99% of my mods <strong>require</strong> the following libraries to function:<br>
+     <p style="text-align: center;"><a href="https://lot51.cc/mods/core-library" target="_blank" class="website-button"><strong>🌐Lot 51's Core Library</strong></a></p>
+<p style="text-align: center;"><a href="https://www.patreon.com/posts/midnitetech-121729961" target="_blank" class="website-button"><strong>📁midnitetech_modlibrary</strong></a><br /></p>
 
-    <div class="section-header">
-      <span class="section-emoji">✅</span>
-      <h3>Required Files</h3>
-    </div>
-    <p>99% of my mods <strong>require</strong> the following libraries to function:</p>
-    <ul>
-      <li>🌐 <a href="https://lot51.cc/mods/core-library" target="_blank"><strong>Lot 51's Core Library</strong></a></li>
-      <li>📁 <a href="https://www.patreon.com/posts/midnitetech-121729961" target="_blank"><strong>midnitetech_modlibrary</strong></a></li>
-    </ul>
-    <p>Make sure both are installed in your <strong>Mods</strong> folder and that you have the latest version of each. All <code>.ts4script</code> files must be no more than <strong>one folder deep</strong> inside your Mods folder, as shown below.</p>
+ <p>Make sure both are installed in your <strong>Mods</strong> folder and that you have the latest version of each. All <code>.ts4script</code> files must be no more than <strong>one folder deep</strong> inside your Mods folder, as shown below.</p>
 
-    <div class="tip">
       ✅ <strong>Correct:</strong><br>
-      <code>Mods/MyModFolder/MyMod.ts4script</code><br><br>
+      <code>Mods/MyModFolder/MyMod.ts4script</code><br>
       ❌ <strong>Incorrect:</strong><br>
       <code>Mods/MyModFolder/AnotherFolder/MyMod.ts4script</code>
     </div>
 
-    <div class="section-header">
-      <span class="section-emoji">🎮</span>
-      <h3>Required DLC</h3>
-    </div>
-   <p>Some of my mods require specific <strong>DLC</strong> packs. If you don’t have the required packs installed, you may see some Last Exception errors—they shouldn’t break your game, but please use with caution.<br><br> All of my mods are compatible with each other and with most other mods — the only exception is if two mods override the same function (e.g., Styled Look Hider). <br><br>Anything <strong>not listed below</strong> is fully <strong>Base Game compatible</strong>.</p>
+    <details>
+      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>🌟Aspirations</summary>
     
-
-    <div class="section-header">
-      <span class="section-emoji">🏢</span>
-      <h3>Career Requirements</h3>
-    </div>
-    <details>
-      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>Click to view</summary>
 <ul>
-<li><a href="https://www.patreon.com/posts/full-time-retail-108866447?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>Retail Career Pack (Full-Time):</strong></a><br />⭐ Get Famous<br />🌨️ Seasons<br />🏔️ Snowy Escape<br />🐈 Cats &amp; Dogs<br /><br /></li>
-<li><strong><a href="https://www.patreon.com/posts/holistic-health-117561715?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link">Holistic Health Consultant (Semi-Active):</a><br /></strong>🪷 Spa Day<br />🏕️ Outdoor Retreat<br /><br /></li>
-<li><a href="https://www.patreon.com/posts/all-hours-full-103336939?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>All Hours Career Pack (Full-Time):</strong></a><br />👥 Get Together<br />🌨️ Seasons<br />♻️ Eco Lifestyle<br />💼 Get to Work<br /><br /></li>
-<li><strong><a href="https://www.patreon.com/posts/115692611">Chiropractor Career (Semi-Active):</a><br /></strong>🪷 Spa Day<br /><br /></li>
-<li><strong><a href="https://www.patreon.com/posts/odd-jobs-36546404?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link">Odd Jobs Megapack:</a><br /></strong>🏝️ Island Living</li>
+<li><a href="https://www.patreon.com/posts/111574483"><strong>❇️Well-Rounded Aspiration</strong></a><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong>👪 <strong>Parenthood</strong><br /><br /></li>
+<li><a href="https://www.tumblr.com/midnitetech/759970267635269632/career-focused-aspiration?source=share"><strong>🪜Career-Focused Aspiration</strong></a><strong>&nbsp;</strong><strong><br /></strong><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong>🏝️<strong> Island Living</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;👪 Parenthood</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;🎓 Discover University</strong><br /><br /></li>
+<li><a href="https://midnitetech.tumblr.com/post/739592931653058560/patreon-early-access-until-january-31st-2024"><strong>🔎Discover Life Aspiration</strong></a><strong>&nbsp;</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong>👥 <strong>Get Together</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;🎮 City Living <span style="text-decoration: underline;"><em>or</em></span> 🏔️ Snowy Escape <span style="text-decoration: underline;"><em>or</em></span> 🏝️ Island Living</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;🐈 Cats &amp; Dogs <span style="text-decoration: underline;"><em>or</em></span> 🐎 Horse Ranch</strong><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/130702004"><strong>🏠Home &amp; Hobbies Aspiration Pack</strong></a></li>
 </ul>
     </details>
-
-    <div class="section-header">
-      <span class="section-emoji">🌟</span>
-      <h3>Aspiration Requirements</h3>
-    </div>
+    
     <details>
-      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>Click to view</summary>
+      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>🏢Careers</summary>
 <ul>
-<li><a href="https://www.patreon.com/posts/well-rounded-111574483?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>Well-Rounded Child Aspiration:</strong></a><br />👪 Parenthood<br /><br /></li>
-<li><strong><a href="https://www.patreon.com/posts/career-focused-110878677?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link">Career Focused Aspiration:</a><br /></strong>🏝️ Island Living<br />👪 Parenthood<br />🎓 Discover University<br /><br /></li>
-<li><a href="https://www.patreon.com/posts/discover-life-96534524?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>Discover Life Aspiration:</strong></a><br />👥 Get Together<br />🎮 City Living <span style="text-decoration: underline;"><strong><em>or</em></strong></span> 🏔️ Snowy Escape <span style="text-decoration: underline;"><strong><em>or</em></strong></span> 🏝️ Island Living<br />🐈 Cats &amp; Dogs <span style="text-decoration: underline;"><strong><em>or</em></strong></span> 🐎 Horse Ranch</li>
+<li><strong></strong><a href="https://midnitetech.tumblr.com/post/749188077803765760/all-hours-full-time-agency-career-pack"><strong>🕝All Hours Career Pack</strong></a><strong>&nbsp;</strong>(full-time multi-shift options)<br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong>👥 <strong>Get Together Required</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;🌞 Seasons Required</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;♻️ Eco Lifestyle Required</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;💼 Get to Work Required</strong><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/122037607"><strong>🏦Banking</strong></a> (full-time)<br /><br /></li>
+<li><a href="https://www.patreon.com/posts/chiropractor-77004254?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>💆Chiropractor</strong></a> (semi-active)<br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;<strong>🪷 Spa Day Required</strong><br /><br /></strong></li>
+<li><a href="https://www.patreon.com/posts/122037607"><strong>🛡️Cybersecurity Hacker</strong></a> (full-time)<br /><br /></li>
+<li><a href="https://midnitetech.tumblr.com/post/748097459334545408/flex-part-time-agency-career-pack"><strong>👨‍💼Flex Part-Time Career Pack</strong></a><strong>&nbsp;</strong>(part-time multi-shift options)<br /><br /></li>
+<li>🖌️<a href="https://www.tumblr.com/midnitetech/760882503143882752/freelance-3d-modeler-career?source=share"><strong>FREELANCE 3D MODELER</strong></a><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/123913485"><strong>🕹️Game Developer</strong></a> (semi-active)<br /><br /></li>
+<li><a href="https://www.patreon.com/posts/117561715"><strong>🌿Holistic Health Consultant</strong></a> (semi-active)<br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong>🪷 <strong>Spa Day Required</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;🏕️ Outdoor Retreat</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;💼 Get to Work</strong><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/122037607"><strong>💼HR</strong></a> (full-time)<br /><br /></li>
+<li><a href="https://www.patreon.com/posts/122037607"><strong>🖥️IT Systems &amp; Support</strong></a> <strong>🆕 </strong>(full-time)<br /><br /></li>
+<li><a href="https://www.patreon.com/posts/110646387"><strong>📚Librarian</strong></a> (semi-active)<br /><br /></li>
+<li><a href="https://www.tumblr.com/midnitetech/685774595752624128/22-odd-jobs-megapack?source=share"><strong>💵Odd Jobs Megapack</strong></a><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong>🏝️ <strong>Island Living Required</strong><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/122037607"><strong>🏡REAL ESTATE AGENT</strong></a> (full-time)<br /><br /></li>
+<li><a href="https://www.tumblr.com/midnitetech/757080074549903360/full-time-retail-career-pack?source=share"><strong>🛍️Retail Career Pack</strong></a><strong>&nbsp;</strong>(full-time)<br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;</strong>⭐<strong> Get Famous Required</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;🌞 Seasons Required</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;🏔️ Snowy Escape Required</strong><br /><strong>&nbsp; &nbsp; &nbsp;&nbsp;🐈 Cats &amp; Dogs Required</strong><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/128375289"><strong>📅SATURDAY SOLUTIONS CAREER PACK</strong></a> (part-time multi-shift options)<br /><br /></li>
+<li><a href="https://www.tumblr.com/midnitetech/755562903347904512/patreon?source=share"><strong>💥SEQUENTIAL ARTIST</strong></a> (semi-active)<br /><br /></li>
+<li><a href="https://midnitetech.tumblr.com/post/758888939899830272/storytelling-semi-active-career-pack"><strong>🧩Storytelling Career Pack</strong></a> (semi-active)</li>
 </ul>
     </details>
-
-    <div class="section-header">
-      <span class="section-emoji">🧪</span>
-      <h3>Gameplay Mod Requirements</h3>
-    </div>
+    
+    
+    
     <details>
-      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>Click to view</summary>
+      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>🧪Gameplay Mods</summary>
+
 <ul>
-<li><a href="https://www.patreon.com/posts/lyrical-icon-109106475?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>Lyrical Icon Scenario:</strong></a><br />🏙️ City Living<br /><br /></li>
-<li><a href="https://www.patreon.com/posts/power-outages-107054469?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>Power Outages:</strong></a><br />🌩️ Seasons<br /><br /></li>
-<li><a href="https://www.patreon.com/posts/simu-online-req-98920782?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>SimU Online Degrees:</strong></a><br />🎓 Discover University<br /><br /></li>
-<li><a href="https://www.patreon.com/posts/noteworthy-120347504?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>Noteworthy Notebook:</strong></a><br />🎮 <strong>Requires ALL DLC<span style="color: #ff0000;">*</span></strong></li>
-</ul>
-<p style="padding-left: 40px;"><span style="color: #ff0000;">*</span><span style="text-decoration: underline;">If you <strong>own every DLC</strong>, use:</span></p>
+<li><strong></strong><a href="https://www.patreon.com/posts/call-me-maybe-127818072?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>📵Call Me, Maybe?</strong></a><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/doomscrolling-103355360?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>📲Doomscrolling</strong></a><br /><strong> <br /></strong></li>
+<li><strong></strong><a href="https://www.patreon.com/posts/lyrical-icon-109106475?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>🎤Lyrical Icon Scenario</strong></a><br /><strong>&nbsp; &nbsp; &nbsp; 🏙️ City Living Required<br /><br /></strong></li>
+<li><strong></strong><a href="https://www.patreon.com/posts/meetup-app-77408236?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>👥Meetup App</strong></a><strong>&nbsp; &nbsp; &nbsp;<br /><br /></strong></li>
+<li><strong></strong><a href="https://www.patreon.com/posts/noteworthy-120347504?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>📓Noteworthy Notebook</strong></a><br />
 <ul>
 <li style="list-style-type: none;">
 <ul style="list-style-type: square;">
-<li><code>midnitetech_NoteworthyNotebook</code> <em><strong>ONLY</strong></em></li>
-<li>You do <em><strong>NOT</strong></em> need the Pack Addons</li>
+<li><code>midnitetech_NoteworthyNotebook_BGC</code> is Base Game Compatible</li>
+<li>Optionally add the matching files from <strong>Pack Addons</strong> for the DLCs you <em><strong>do</strong></em> have<code></code></li>
+<li><code>midnitetech_NoteworthyNotebook</code>requires you to own <strong>ALL DLCs</strong>! <strong>PackAddons</strong> is included.</li><br>
 </ul>
 </li>
 </ul>
-<p style="padding-left: 40px;"><span style="text-decoration: underline;">If you <strong>do NOT own all DLC</strong>s, use:</span></p>
-<ul>
-<li style="list-style-type: none;">
-<ul style="list-style-type: square;">
-<li><code>midnitetech_NoteworthyNotebook_BGC<br /></code></li>
-<li>Optionally add the matching files from <strong>Pack Addons</strong> for the DLCs you <em><strong>do</strong></em> have</li>
-</ul>
 </li>
+<li><code></code><a href="https://www.tumblr.com/midnitetech/754536525137674240/patreon?source=share"><strong>🔌Power Outages</strong></a><strong>&nbsp;<br /></strong><strong>&nbsp; &nbsp; &nbsp; 🌞 Seasons Required<br /><br /></strong></li>
+<li><strong></strong><a href="https://midnitetech.tumblr.com/post/748816445811703808/simazon-unlimited-ebooks"><strong>📖Simazon Unlimited</strong></a><br /><br /></li>
+<li><a href="https://www.tumblr.com/midnitetech/747500988691267584/patreon?source=share"><strong>💲SIMOLEONS SIDE HUSTLEZ</strong></a><br /><strong> <br /></strong></li>
+<li><strong></strong><a href="https://www.tumblr.com/midnitetech/742929514357784576/simu-online-degrees-skills?source=share"><strong>📜SimU Online Degrees</strong></a><strong>&nbsp;<br />&nbsp; &nbsp; &nbsp; 🎓 Discover University Required<br /><br /></strong></li>
+<li><strong></strong><a href="https://midnitetech.tumblr.com/post/740249331280510976/simu-online-skill-classes"><strong>💡SimU Online Skill Classes</strong></a><br /><br /></li>
+<li><a href="https://www.tumblr.com/midnitetech/753385817989316608/patreon?source=share"><strong>✍️WRITE BOOKS OVERHAUL</strong></a></li>
 </ul>
-    </details>
 
-    <div class="section-header">
-      <span class="section-emoji">🧼</span>
-      <h3>Mini Mods Requirements</h3>
-    </div>
+    </details>
+    
     <details>
-      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>Click to view</summary>
+      <summary><svg class="arrow" viewBox="0 0 8 8"><path d="M0 0 L6 4 L0 8 Z"/></svg>🧼Mini Mods</summary>
 <ul>
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>Facial Cleanser 4 All:</strong></a><br />🏫 High School Years<br /><br /></li>
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>EP17 &ndash; No Specters:</strong></a><br />🪦 Life &amp; Death<br /><br /></li>
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>Less PO Visits:</strong></a><br />🏘️ For Rent<br /><br /></li>
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>Odd Jobs &ndash; Hide Maxis:</strong></a><br />🏝️ Island Living<br /><br /></li>
-<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>No Scared of Thunderstorms Moodlet:</strong></a><br />🌩️ Seasons</li>
+<li><strong></strong><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>🎲CAS Name Randomizer</strong></a><strong>&nbsp;</strong><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/102539962"><strong>🧑‍💼CUSTOM CAREER UNIFORMS</strong></a><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>🚪EP15_LessPOVisits</strong></a><br />&nbsp; &nbsp; &nbsp; 🏘️ <strong>For Rent Required</strong><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>👻EP17_DisableSpecters</strong></a><br />&nbsp;&nbsp; &nbsp; 🪦 <strong>Life &amp; Death Required</strong><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>🧼Facial Cleanser 4 All</strong></a><br />&nbsp;&nbsp; &nbsp; 🏫 <strong>High School Years Required</strong><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/mini-mods-69172769"><strong>🚿FASTER TAKE SHOWER</strong></a><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>🏪Generic Lots: Empty No More</strong></a><strong>&nbsp;<br /><br /></strong></li>
+<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>💄Makeup_Hider</strong></a><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>💵OddJobs_HideMaxis</strong></a><br />&nbsp;&nbsp; &nbsp; 🏝️ <strong>Island Living Required</strong><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>💤Stay Asleep</strong></a><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>👗Styled Looks Hider</strong></a><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/69172769"><strong>🔄Switch Career Branches</strong></a><br /><br /></li>
+<li><a href="https://www.patreon.com/posts/mini-mods-69172769?utm_medium=clipboard_copy&amp;utm_source=copyLink&amp;utm_campaign=postshare_creator&amp;utm_content=join_link"><strong>⛈️Thunderstorms_NoScared</strong></a><br />&nbsp;&nbsp; &nbsp; 🌞 <strong>Seasons Required</strong></li>
 </ul>
     </details>
 
-    <div class="section-header">
-      <span class="section-emoji">📚</span>
-      <h3>Need Help?</h3>
-    </div>
-    <p>For downloads, troubleshooting, and all mod info, visit my site:</p>
+    <div class="footer">
+    <p style="text-align: center;">For troubleshooting, update status and all other info, visit my site:</p>
     <div style="text-align: center; margin-top: 1em;">
       <a href="https://midnitetechmods.com/" target="_blank" class="website-button">🌐 midnitetechmods.com</a>
     </div>
-
-    <div class="footer">
-      💖 Enjoy the mods, and happy Simming!<br>
-      ~ midnitetech
-    </div>
-  </div>
+     <p style="text-align: center;">Enjoy the mods, and happy Simming!<br>
+      <strong>~midnitetech</strong>💚<div style="text-align: center; margin-top: 1em;">
 
   <script>
     function toggleMode() {
